@@ -3,10 +3,12 @@ set -e
 
 function usage() {
 cat << EOD
-localci [--help] [--version] [--] commit ...
+localci [options] [--] commits ...
 
---help      show help page
---version   show version page
+OPTIONS
+      --help  show help page
+      --version
+              show version page
 EOD
 }
 
