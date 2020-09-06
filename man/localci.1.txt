@@ -1,0 +1,30 @@
+LOCALCI(1)                       User Commands                      LOCALCI(1)
+
+NAME
+       localci - Build a range of commits
+
+SYNOPSIS
+       localci [--help] [--version] [--] commit ...
+
+DESCRIPTION
+       Checks  out  all  provided  commits and runs the build command.  If all
+       builds are successful, switches back to the originally checked out  re‐
+       vision.   Otherwise,  stops  at the first unsuccessful build and leaves
+       the repository in a detached state.
+
+       The commits are directly passed to  git rev-list so  ranges  like  mas‐
+       ter..HEAD are allowed.
+
+OPTIONS
+       --help
+              Output help information and exit.
+
+       --version
+              Output version information and exit.
+
+EXAMPLES
+       localci master..HEAD
+
+       localci 55c486637 foo..bar
+
+Serenity                          2020-09-06                        LOCALCI(1)
